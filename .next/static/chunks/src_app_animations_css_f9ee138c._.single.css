@@ -1,0 +1,73 @@
+/* [project]/src/app/animations.css [app-client] (css) */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentle-pulse {
+  0% {
+    opacity: .8;
+    transform: scale(.98);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: .8;
+    transform: scale(.98);
+  }
+}
+
+.animate-fade-in {
+  animation: .6s ease-out forwards fade-in;
+}
+
+.animate-pulse {
+  animation: 3s ease-in-out infinite gentle-pulse;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-duration: .15s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-duration: .15s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: .15s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.hover\:scale-\[1\.01\]:hover {
+  transform: scale(1.01);
+}
+
+.hover\:scale-\[1\.02\]:hover {
+  transform: scale(1.02);
+}
+
+.hover\:bg-zinc-800\/80:hover {
+  background-color: #27272acc;
+}
+
+.hover\:bg-purple-600:hover {
+  background-color: #9333ea;
+}
+
+/*# sourceMappingURL=src_app_animations_css_f9ee138c._.single.css.map*/
